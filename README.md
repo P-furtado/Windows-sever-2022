@@ -158,22 +158,22 @@
 
 <h3>&#9319;  Configuring File sharing and Permissions</h3>
 <h3> Objective: Set up file sharing within the AD environment.</h3>
+
 	
-- Create a network share (e.g., \\ServerName\SHARED). Create a folder named
-"SHARED" on the C: drive.
-- 	  Set Folder Properties
+	  -Create a network share (e.g., \\ServerName\SHARED). Create a folder named "SHARED" on the C: drive.
+
+	  -Set Folder Properties
 		○Right-click the folder and select "Properties."
 		○Go to the "Sharing" tab
 
 
--	  Share the Folder
+	  -Share   are the Folder
 		○Click "Advanced Sharing."
 		○Check "Share this folder" and provide a share name (e.g., "SharedFiles").
 		○Click "Permissions" and set the share permissions (e.g., "Everyone" with "Read" access).
 
 
-
-  -	  Set NTFS Permissions
+	  - Set   NTFS Permissions
 		○Go   to the Security Tab. In the folder properties, go to the "Security" tab.
 		○Edit Permissions
     		○Click "Edit" to modify the NTFS permissions.
@@ -181,6 +181,7 @@
 
 
 <h3>&#9320;  Map Network Drives via Group Policy</h3>
+
 	  -Open Group Policy Management
 		○On the domain controller, open the Group Policy Management Console (GPMC).
 
@@ -188,7 +189,6 @@
 	  -Create a GPO
 		○Create a new GPO (e.g., Mapped Drive).
 
-  
 	  -Configure Drive Mapping
 		○Navigate to User Configuration -> Preferences -> Windows Settings -> Drive Maps.
 		○Right-click and select "New" -> "Mapped Drive."
@@ -199,13 +199,15 @@
 	  -Link the GPO
 		○Link the GPO to the appropriate Organizational Unit (OU) that contains the users who need access to the shared folder.
 
-  
+
 	  -Update Group Policy
 		○On the client computers, update the group policy by running gpupdate /force in the command prompt or simply restart the computers.
 
 
 <h3>&#9321;  Creating Service Accounts</h3>
 <h3> Objective: Create and configure a service account.</h3>
+
+
 	  -Navigate to the appropriate OU (e.g., Service Accounts).
 
 
@@ -238,6 +240,7 @@
 
 
 <h2>Testing and Verification</h2>
+
 	  -Verify User Logon: Log on to a client machine using one of the newly created user accounts.
 
 	  -Check Group Membership:
@@ -255,8 +258,3 @@
 
 
 
-<img width="334" alt="ping 2" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/ede5ce46-2d9d-49c6-82d7-5afc9796294b">
-
-<h2> Final Thoughts </h2>
-
-<p> We've completed the foundational setup for our Azure and Active Directory project series. By configuring two virtual machines, we've laid the groundwork for implementing the subsequent set of projects. In this project, we focused on establishing a Domain Controller and a Client machine, enabling remote access, and briefly examining network traffic between them. Moving forward, this foundation will help implement more advanced configurations and practical scenarios in Azure and Active Directory. </p>
