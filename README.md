@@ -43,7 +43,7 @@
 -	  Create a nested OU inside the locations (e.g., USA > Computers, Users, Service Accounts)
 -	  Create a nested OU inside Computers (e.g., IT > Servers)
 -	  Create a nested OU inside Users (e.g., Accounting, HR, IT)
-	  <h3>&#9313;  Install Active Directory Tools and Promote as DC</h3>
+	  
    <h3>&#9313;  Creating User Accounts</h3>
 	 <h3> Objective: Create user accounts with specific attributes</h3>
 	
@@ -53,36 +53,30 @@
 		○	First Name: John
 		○	Last Name: Doe
 		○	User Logon Name: jdoe
-	○	Set a password and configure the account settings (e.g., password never expires).
-	○	Set a Description for John Doe (e.g., Recruiter)
-	○	Create more users for IT and Accounting OU following the steps above
+-	  Set a password and configure the account settings (e.g., password never expires).
+- 	  Set a Description for John Doe (e.g., Recruiter)
+- 	  Create more users for IT and Accounting OU following the steps above
 
   
     <p>
 <img width="700" alt="VM image" src="https://imgur.com/Z4W9hwj">
 </p>
-2.	Creating User Accounts
-	●	Objective: Create user accounts with specific attributes.
-	○Navigate to the appropriate OU (e.g., HR).
-	○Right-click the OU and select New > User.
-	○Fill in the user details:
-		○	First Name: John
-		○	Last Name: Doe
-		○	User Logon Name: jdoe
-	○	Set a password and configure the account settings (e.g., password never expires).
-	○	Set a Description for John Doe (e.g., Recruiter)
-	○	Create more users for IT and Accounting OU following the steps above
-  <p>
-<img width="700" alt="VM image" src="https://imgur.com/a/lHkoUfz">
-</p>
-3.	Creating Groups
-	●	Objective: Create security and distribution groups.
-		○	Navigate to an OU (e.g., HR).
-		○	Right-click the OU and select New > Group. 3.	Name the group (e.g., #HR_Department).
+
+<h3>&#9314;  Creating Groups</h3>
+
+<h3> Objective: Create security and distribution groups.</h3>
+	
+- 	  Navigate to an OU (e.g., HR)
+
+
+- 	  Right-click the OU and select New > Group
+	  
+- 	  Name the group (e.g., #HR_Department)
 		○	Select the group scope (e.g., Global) and type (e.g., Security).
 	 <p>
 <img width="700" alt="VM image" src="https://imgur.com/a/aPqXftZz">
 </p>
+
 4.	Adding Users to Groups
 	●	Objective: Manage group memberships.
 	○	Open the properties of a user account (e.g., jdoe).
