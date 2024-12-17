@@ -20,7 +20,7 @@
 
 - Windows Server 2022
 - Windows 11 Enterprise (24H2)
-- 
+  
 <h2>Virtual Machine Setup</h2>
 
 
@@ -39,13 +39,13 @@
 -         Install a couple of Windows client machines (e.g., Windows 10 or Windows 11 Enterprise of Pro) and join them to the domain.
 
 
-<h2>Hands-On Activities</h2>
 
-<h3>&#9312;  Rename the server hostname</h3>
-
+   <h2>Hands-On Activities</h2>
+-	  Rename the server hostname
+	  
 -	  Open Active Directory Users and Computers (ADUC)
-   <h3>&#9313;  Install Active Directory Tools and Promote as DC</h3>
-   <h2>Organizational Units</h2>
+	  
+-	  Install Active Directory Tools and Promote as DC
   <h3>&#9312;  Creating Organizational Units (OUs)</h3>
 
 
