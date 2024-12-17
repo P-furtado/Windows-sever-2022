@@ -7,6 +7,17 @@
 <p>Welcome to the inaugural project in a comprehensive series of tutorials focused on Azure and Active Directory implementation. This initial project serves as the foundational cornerstone and setup for the subsequent  parts of this tutorial series. The primary objective is to lay the groundwork for a simple lab environment on Azure to simulate the environment in which Active Directory is employed within an enterprise setting.
 </p>
 
+<h2>Environments and Technologies Used</h2>
+
+- Microsoft Azure (Virtual Machines/Compute)
+- Remote Desktop
+- Active Directory Domain Services
+- PowerShell
+
+<h2>Operating Systems Used </h2>
+
+- Windows Server 2022
+- Windows 10 (21H2)
 <h2>Virtual Machine Setup</h2>
 
 
@@ -102,11 +113,14 @@
 - 	 Add user in the OU IT to Domain Admins Group
 
  <h3>&#9316;  Configure Network settings for the Server</h3>
+ 
 - 	  Change the domain controller’s IP address to static IP
+
 
 - 	  Change DNS Servers to loopback and google DNS
 	  
  <h3>&#9317;  Join Windows Client to the Domains</h3>
+ 
 - 	  Change the DNS server of the computer to the DC IP and google DNS
 
 
@@ -119,15 +133,22 @@
 
 <h3> Objective: Create and link policies to OUs.</h3>
 
+
+
 - 	Open Group Policy Management Console (GPMC).
- 	
+
+  
 - 	Right-click the domain or an OU and select Create a GPO in this domain, and Link it here.
- 	
+
+  
 - 	Name the GPO (e.g., Password Policy).
- 	
+
+  
 - 	Edit the GPO and configure settings (e.g., minimum password length, password complexity).
+
    
 - 	Link the GPO to the desired OU.
+
    
 - 	Create more GPO to Restrict Control Panel Access, Block USB Drives and Set a default desktop wallpaper for all users
    
@@ -140,10 +161,14 @@
 - 	  Set Folder Properties
 		○Right-click the folder and select "Properties."
 		○Go to the "Sharing" tab
+
+
 -	  Share the Folder
 		○Click "Advanced Sharing."
 		○Check "Share this folder" and provide a share name (e.g., "SharedFiles").
 		○Click "Permissions" and set the share permissions (e.g., "Everyone" with "Read" access).
+
+
 
   -	  Set NTFS Permissions
 		○Go   to the Security Tab. In the folder properties, go to the "Security" tab.
@@ -155,194 +180,77 @@
 <h3>&#9320;  Map Network Drives via Group Policy</h3>
 	  -Open Group Policy Management
 		○On the domain controller, open the Group Policy Management Console (GPMC).
+
+  
 	  -Create a GPO
 		○Create a new GPO (e.g., Mapped Drive).
+
+  
 	  -Configure Drive Mapping
 		○Navigate to User Configuration -> Preferences -> Windows Settings -> Drive Maps.
 		○Right-click and select "New" -> "Mapped Drive."
 		○Set the location (e.g., \\ServerName\SHARED) and choose a drive letter.
 		○Configure additional settings as needed (e.g., "Reconnect," "Label as," etc.).
+
+  
 	  -Link the GPO
 		○Link the GPO to the appropriate Organizational Unit (OU) that contains the users who need access to the shared folder.
+
+  
 	  -Update Group Policy
 		○On the client computers, update the group policy by running gpupdate /force in the command prompt or simply restart the computers.
 
 
 <h3>&#9321;  Creating Service Accounts</h3>
 <h3> Objective: Create and configure a service account.</h3>
-	
 	  -Navigate to the appropriate OU (e.g., Service Accounts).
+
+
 	  -Right-click the OU and select New > User.
-	  -Fill in the service account details (e.g., $Autologin) for name and set a Description.
-	  -Set a strong password and configure the account settings (e.g., password never expires, cannot change password).
+
+
+	  -Fill in the service account details (e.g., $Autologin) for name and set a Description. -Set a strong password and configure the account settings (e.g., password never expires, cannot change password).
+
+
 	  -Assign the necessary permissions to the service account on the relevant resources.
+
+
 	  -Set up with a client machine using Windows Autologon tool (sysinternals)
+
+
 
 <h3>&#9322;  Configuring Account Lockout Policy</h3>
 <h3> Objective: Set up account lockout policies to enhance security.</h3>
 	
-		-Open GPMC and create a new GPO (e.g., Account Lockout Policy).
+	  -Open GPMC and create a new GPO (e.g., Account Lockout Policy).
+
+
 	  -Edit the GPO:
 		○Navigate to Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
 		○Configure the settings (e.g., Account lockout threshold, Account lockout duration, Reset account lockout counter after).
+
+  
 	  -Link the GPO to the desired OU.
 
 
 
 <h2>Testing and Verification</h2>
-1.Verify User Logon: Log on to a client machine using one of the newly created user accounts.
-2.Check Group Membership:
-	○	Open a Command Prompt and run gpresult /r to verify applied policies and group memberships.
-3.Test GPOs:
-	○	Log on to a client machine with a user account that has GPOs configured and verify that the GPOs were applied.
-4.Test Network Drives:
-	○	Log on to a client machine with a user account that has Drive Mapping GPO configured and verify that they can access the network folder.
+	  -Verify User Logon: Log on to a client machine using one of the newly created user accounts.
+
+	  -Check Group Membership:
+		○Open a Command Prompt and run gpresult /r to verify applied policies and group memberships.
+ 
+	  -Test GPOs:
+		○Log on to a client machine with a user account that has GPOs configured and verify that the GPOs were applied.
+ 
+	  -Test Network Drives:
+		○Log on to a client machine with a user account that has Drive Mapping GPO configured and verify that they can access the network folder.
+ 
+ 
 
 
 
 
-<h2>Environments and Technologies Used</h2>
-
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Active Directory Domain Services
-- PowerShell
-
-<h2>Operating Systems Used </h2>
-
-- Windows Server 2022
-- Windows 10 (21H2)
-
-
-<h2>Configuration Steps</h2>
-
-<h3>&#9312; Create the Domain Controller</h3>
-
-- Create a virtual machine on Azure.
-- Name it DC-01 
-- Select Windows Server 2022: Azure Edition - x64 Gen2 as the image
-
-
-<p>
-<img width="776" alt="VM image" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/f072cd7b-b547-4006-9ddb-ae6ba39c497e">
-</p>
-<p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<strong> NOTE: Make sure to select at least 2 vcpus and 16 GiB memory and take note of the vnet that the VM has created.</strong>
-</p>
-<br />
-
-<p>
-<img width="736" alt="DC-vm" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/323e78b9-4e86-46e3-b021-6ac529ccb600">
-</p>
-<p>
-</p>
-<br />
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<h3>&#9313; Set the Domain Controller's Private IP to static </h3>
-
--  Once the VM has been deployed, proceed to the VM overview page and select "Networking" on the left side. 
-<img width="692" alt="networking" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/a35e1aad-57e1-4c1c-9e4e-aefa4fcf31ea">
-<br>
-<br>
-<br>
-
--  Select Network Interface Card -> IP configurations -> ipconfig1 and set Private IP address allocation to static.
-
-<br>
-
-<p>
-<img width="518" alt="static" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/8629a747-9809-4329-859f-2d38896ec484">
-</p>
-
-<br />
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<h3>&#9314; Create the client VM </h3>
-
-- Once again create a new VM and we'll name it Client-01. We'll select Windows 10 as the image and make sure to select at least 2 vcpus and 16 GiB memory.
-<img width="717" alt="VM 2 name " src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/a3005b2a-cc0a-49f6-8b9e-c6a594c2aba9">
-
-<br>
-<br>
-<br>
-
-<p><strong> NOTE: Make sure to select the same resource group and vnet from the DC-01 VM </strong></p>
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<img width="731" alt="VM2 vnet" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/d591d9b0-ce68-4e74-a466-cdd34886c74b">\
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-- Now finalize everything and wait for its deployment.
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<h3>&#9315; Ensure connectivity between Domain Controller and Client  </h3>
-
-<p>To ensure connectivity between the two VM's, we will ping the domain controller from the client.</p>
-
-- First login to the Client-01 using it's public ip address and remote desktop
-
-<img width="993" alt="client 1 public ip" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/c12a5300-fd26-4ae7-b15b-b4fee053bece">
-
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<img width="297" alt="remote desktop first login" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/97467245-a6b9-4922-a668-71fdf6f77989">
-
-<br>
-<br>
-<br>
-<br>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<p><strong> Find DC-01's private ip address in the Azure Portal and copy it. Proceed to Client-01 and open the terminal and type "ping -t (DC-01 private ip address)" </strong></p>
-
-
-<img width="668" alt="perpetual ping" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/d83a1cbf-2619-4382-bc3c-7025ed246119">
-
-
-<br>
-<br>
-
-<p> <strong> Now notice how the request timed out, this is because ICMP v4 traffic is blocked by default on DC-01's firewall. So we will have to enable inbound ICMP traffic to allow for Client-01's ping.</strong> </p>
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<p><strong> Login to DC-01 using remote desktop and open windows defender firewall and select advanced settings. Sort by protocol and find both ICMP echo requests and enable both these rules by right clicking and selecting enable rule.</strong></p>
-
-<br>
-
-<img width="668" alt="firewall" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/818f7ebe-2ec3-4bd5-b59a-2bc55c24a567">
-
-<br>
-
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-<p><strong>.</strong></p>
-
-<p><strong> Now once the traffic has been enabled, you can check back with Client-01 and notice that the ping is now successful.</strong> </p>
 
 <img width="334" alt="ping 2" src="https://github.com/kirkgacias/ad-and-azuresetup/assets/158519921/ede5ce46-2d9d-49c6-82d7-5afc9796294b">
 
