@@ -153,39 +153,39 @@
 
 
 <h3>&#9320;  Map Network Drives via Group Policy</h3>
-	Open Group Policy Management
-		a.	On the domain controller, open the Group Policy Management Console (GPMC).
-	Create a GPO
-		a.	Create a new GPO (e.g., Mapped Drive).
-	Configure Drive Mapping
-		a.	Navigate to User Configuration -> Preferences -> Windows Settings -> Drive Maps.
-		b.	Right-click and select "New" -> "Mapped Drive."
-		c.	Set the location (e.g., \\ServerName\SHARED) and choose a drive letter.
-		d.	Configure additional settings as needed (e.g., "Reconnect," "Label as," etc.).
-	Link the GPO
-		-	Link the GPO to the appropriate Organizational Unit (OU) that contains the users who need access to the shared folder.
-	Update Group Policy
-		-	On the client computers, update the group policy by running gpupdate /force in the command prompt or simply restart the computers.
+	  -Open Group Policy Management
+		○On the domain controller, open the Group Policy Management Console (GPMC).
+	  -Create a GPO
+		○Create a new GPO (e.g., Mapped Drive).
+	  -Configure Drive Mapping
+		○Navigate to User Configuration -> Preferences -> Windows Settings -> Drive Maps.
+		○Right-click and select "New" -> "Mapped Drive."
+		○Set the location (e.g., \\ServerName\SHARED) and choose a drive letter.
+		○Configure additional settings as needed (e.g., "Reconnect," "Label as," etc.).
+	  -Link the GPO
+		○Link the GPO to the appropriate Organizational Unit (OU) that contains the users who need access to the shared folder.
+	  -Update Group Policy
+		○On the client computers, update the group policy by running gpupdate /force in the command prompt or simply restart the computers.
 
 
 <h3>&#9321;  Creating Service Accounts</h3>
 <h3> Objective: Create and configure a service account.</h3>
 	
-			Navigate to the appropriate OU (e.g., Service Accounts).
-			Right-click the OU and select New > User.
-			Fill in the service account details (e.g., $Autologin) for name and set a Description.
-			Set a strong password and configure the account settings (e.g., password never expires, cannot change password).
-			Assign the necessary permissions to the service account on the relevant resources.
-			Set up with a client machine using Windows Autologon tool (sysinternals)
+	  -Navigate to the appropriate OU (e.g., Service Accounts).
+	  -Right-click the OU and select New > User.
+	  -Fill in the service account details (e.g., $Autologin) for name and set a Description.
+	  -Set a strong password and configure the account settings (e.g., password never expires, cannot change password).
+	  -Assign the necessary permissions to the service account on the relevant resources.
+	  -Set up with a client machine using Windows Autologon tool (sysinternals)
 
 <h3>&#9322;  Configuring Account Lockout Policy</h3>
 <h3> Objective: Set up account lockout policies to enhance security.</h3>
 	
-		Open GPMC and create a new GPO (e.g., Account Lockout Policy).
-	Edit the GPO:
-		○	Navigate to Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
-		○	Configure the settings (e.g., Account lockout threshold, Account lockout duration, Reset account lockout counter after).
-3.	Link the GPO to the desired OU.
+		-Open GPMC and create a new GPO (e.g., Account Lockout Policy).
+	  -Edit the GPO:
+		○Navigate to Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
+		○Configure the settings (e.g., Account lockout threshold, Account lockout duration, Reset account lockout counter after).
+	  -Link the GPO to the desired OU.
 
 
 
