@@ -99,44 +99,56 @@
 - 	 Add user in the OU IT to Domain Admins Group
 
  <h3>&#9316;  Configure Network settings for the Server</h3>
-5.Configure Network settings for the Server
-	○	Change the domain controller’s IP address to static IP
-	○	Change DNS Servers to loopback and google DNS
+- 	  Change the domain controller’s IP address to static IP
+
+- 	  Change DNS Servers to loopback and google DNS
+	  
  <h3>&#9317;  Join Windows Client to the Domains</h3>
-6.Join Windows Client to the Domain
-	○	Change the DNS server of the computer to the DC IP and google DNS
-	○	Join the computer to the domain and move the computer to the appropriate OU
-	○	Login with the user created in Active Directory (e.g., John Doe)
- <h3>&#9318;  Creating and Linking Group Policy Objects</h3>
-7.	○	Creating and Linking Group Policy Objects (GPOs)
+- 	  Change the DNS server of the computer to the DC IP and google DNS
+
+
+- 	  Join the computer to the domain and move the computer to the appropriate OU
+   
+     
+- 	  Login with the user created in Active Directory (e.g., John Doe)
+     
+ <h3>&#9318;  Creating and Linking Group Policy Objects (GPOs)</h3>
+
 <h3> Objective: Create and link policies to OUs.</h3>
-●Objective: Create and link policies to OUs.
-	○	Open Group Policy Management Console (GPMC).
-	○	Right-click the domain or an OU and select Create a GPO in this domain, and Link it here.
-	○	Name the GPO (e.g., Password Policy).
-	○	Edit the GPO and configure settings (e.g., minimum password length, password complexity).
-	○	Link the GPO to the desired OU.
-	○	Create more GPO to Restrict Control Panel Access, Block USB Drives and Set a default desktop wallpaper for all users
-8.Adding Users to Groups
+
+- 	Open Group Policy Management Console (GPMC).
+ 	
+- 	Right-click the domain or an OU and select Create a GPO in this domain, and Link it here.
+ 	
+- 	Name the GPO (e.g., Password Policy).
+ 	
+- 	Edit the GPO and configure settings (e.g., minimum password length, password complexity).
+   
+- 	Link the GPO to the desired OU.
+   
+- 	Create more GPO to Restrict Control Panel Access, Block USB Drives and Set a default desktop wallpaper for all users
+   
+
 <h3>&#9319;  Configuring File sharing and Permissions</h3>
 <h3> Objective: Set up file sharing within the AD environment.</h3>
-	●	Objective: Set up file sharing within the AD environment
-Create a network share (e.g., \\ServerName\SHARED). Create a folder named
+	
+- Create a network share (e.g., \\ServerName\SHARED). Create a folder named
 "SHARED" on the C: drive.
-Set Folder Properties
--	Right-click the folder and select "Properties."
--	Go to the "Sharing" tab
-Share the Folder
--	Click "Advanced Sharing."
--	Check "Share this folder" and provide a share name (e.g., "SharedFiles").
--	Click "Permissions" and set the share permissions (e.g., "Everyone" with "Read" access).
-Set NTFS Permissions
--	Go to the Security Tab. In the folder properties, go to the "Security" tab.
--	Edit Permissions
-❖	Click "Edit" to modify the NTFS permissions.
-❖	Add the appropriate users or groups and assign the necessary permissions (e.g., "Read & Execute," "Modify," etc.).
+- 	  Set Folder Properties
+		○Right-click the folder and select "Properties."
+		○Go to the "Sharing" tab
+-	  Share the Folder
+		○Click "Advanced Sharing."
+		○Check "Share this folder" and provide a share name (e.g., "SharedFiles").
+		○Click "Permissions" and set the share permissions (e.g., "Everyone" with "Read" access).
 
-9.Map Network Drives via Group Policy
+  -	  Set NTFS Permissions
+		○Go   to the Security Tab. In the folder properties, go to the "Security" tab.
+		○Edit Permissions
+    		○Click "Edit" to modify the NTFS permissions.
+    		○Add the appropriate users or groups and assign the necessary permissions (e.g., "Read & Execute," "Modify," etc.).
+
+
 <h3>&#9320;  Map Network Drives via Group Policy</h3>
 	Open Group Policy Management
 		a.	On the domain controller, open the Group Policy Management Console (GPMC).
@@ -152,25 +164,27 @@ Set NTFS Permissions
 	Update Group Policy
 		-	On the client computers, update the group policy by running gpupdate /force in the command prompt or simply restart the computers.
 
-10.Creating Service Accounts
+
 <h3>&#9321;  Creating Service Accounts</h3>
 <h3> Objective: Create and configure a service account.</h3>
-	●	Objective: Create and configure a service account.
+	
 			Navigate to the appropriate OU (e.g., Service Accounts).
 			Right-click the OU and select New > User.
 			Fill in the service account details (e.g., $Autologin) for name and set a Description.
 			Set a strong password and configure the account settings (e.g., password never expires, cannot change password).
 			Assign the necessary permissions to the service account on the relevant resources.
 			Set up with a client machine using Windows Autologon tool (sysinternals)
-11.Configuring Account Lockout Policy
+
 <h3>&#9322;  Configuring Account Lockout Policy</h3>
 <h3> Objective: Set up account lockout policies to enhance security.</h3>
-	●	Objective: Set up account lockout policies to enhance security.
+	
 		Open GPMC and create a new GPO (e.g., Account Lockout Policy).
 	Edit the GPO:
 		○	Navigate to Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
 		○	Configure the settings (e.g., Account lockout threshold, Account lockout duration, Reset account lockout counter after).
 3.	Link the GPO to the desired OU.
+
+
 
 <h2>Testing and Verification</h2>
 1.Verify User Logon: Log on to a client machine using one of the newly created user accounts.
