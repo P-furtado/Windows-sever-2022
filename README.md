@@ -2,9 +2,9 @@
 <img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>Windows Sever: A Home Lab Guide Active Directory, GPO, and Network File Sharing usinf VM Workstation PRO</h1>
+<h1>Windows Sever: A Home Lab Guide to Active Directory, GPO, and Network File Sharing using VM Workstation PRO</h1>
 
-<p>Welcome to the inaugural project in a comprehensive series of tutorials focused on Azure and Active Directory implementation. This initial project serves as the foundational cornerstone and setup for the subsequent  parts of this tutorial series. The primary objective is to lay the groundwork for a simple lab environment on Azure to simulate the environment in which Active Directory is employed within an enterprise setting.
+<p>
 </p>
 
 <h2>Environments and Technologies Used</h2>
