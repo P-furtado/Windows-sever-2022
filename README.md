@@ -9,11 +9,8 @@
 
 <h2>Overview </h2>
 
-<h2>Key Objectives</h2>
-<h3>Virtual Machine Setup</h3>
--   VMware Workstation Pro - 1.2 GB Disk Space and 64-bit OSC
--   Windows Server 2022- 2GB Memory, 20GB Disk Space
--   Windows 10 Pro - 2GB Memory, 20GB Disk Space (minimum)
+<h2>Virtual Machine Setup</h2>
+-	VMware Workstation Pro - 1.2 GB Disk Space and 64-bit OSCWindows Server 2022- 2GB Memory, 20GB Disk Space    Windows 10 Pro - 2GB Memory, 20GB Disk Space (minimum)
 
 
 <h3>Lab Setup</h3>
@@ -23,7 +20,8 @@
 -	  Install Windows Server (preferably Windows Server 2019 or later) and configure it as a domain controller.
 -         Install a couple of Windows client machines (e.g., Windows 10 or Windows 11 Enterprise of Pro) and join them to the domain.
 
-<h3>Hands-On Activities</h3>
+<h2>Hands-On Activities</h2>
+<h3>Rename the server hostname</h3>
 
 
 1. Rename the server hostname:
@@ -38,6 +36,17 @@ Objective: Organize the directory structure
 -	  Create a nested OU inside the locations (e.g., USA > Computers, Users, Service Accounts)
 -	  Create a nested OU inside Computers (e.g., IT > Servers)
 -	  Create a nested OU inside Users (e.g., Accounting, HR, IT)
+-	  2.	Creating User Accounts
+	●	Objective: Create user accounts with specific attributes.
+	○Navigate to the appropriate OU (e.g., HR).
+	○Right-click the OU and select New > User.
+	○Fill in the user details:
+		○	First Name: John
+		○	Last Name: Doe
+		○	User Logon Name: jdoe
+	○	Set a password and configure the account settings (e.g., password never expires).
+	○	Set a Description for John Doe (e.g., Recruiter)
+	○	Create more users for IT and Accounting OU following the steps above
 
   
     <p>
