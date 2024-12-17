@@ -18,8 +18,8 @@
 - 	  Windows 10 Pro - 2GB Memory, 20GB Disk Space (minimum)
 
 <h2>Lab Setup</h2>
+<h3> Set Up a Virtual Lab Environment</h3>
 
-1. Set Up a Virtual Lab Environment:
 -	  Use virtualization software like VMware Workstation, Hyper-V, or VirtualBox.
 -	  Install Windows Server (preferably Windows Server 2019 or later) and configure it as a domain controller.
 -         Install a couple of Windows client machines (e.g., Windows 10 or Windows 11 Enterprise of Pro) and join them to the domain.
@@ -28,11 +28,12 @@
 <h2>Hands-On Activities</h2>
 <h3>Rename the server hostname</h3>
 
+<h3>&#9312;  Rename the server hostname</h3>
 
-1. Rename the server hostname:
 -	  Open Active Directory Users and Computers (ADUC)
-2.	Install Active Directory Tools and Promote as DC
-3.	Creating Organizational Units (OUs)
+   <h3>&#9313;  Install Active Directory Tools and Promote as DC</h3>
+  <h3>&#9314;  Creating Organizational Units (OUs)</h3>
+
 
 Objective: Organize the directory structure
 -	  Open Active Directory Users and Computers (ADUC).
@@ -42,6 +43,7 @@ Objective: Organize the directory structure
 -	  Create a nested OU inside Computers (e.g., IT > Servers)
 -	  Create a nested OU inside Users (e.g., Accounting, HR, IT)
 -	  2.	Creating User Accounts
+	 
 	●	Objective: Create user accounts with specific attributes.
 	○Navigate to the appropriate OU (e.g., HR).
 	○Right-click the OU and select New > User.
