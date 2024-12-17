@@ -7,18 +7,23 @@
 <p>Welcome to the inaugural project in a comprehensive series of tutorials focused on Azure and Active Directory implementation. This initial project serves as the foundational cornerstone and setup for the subsequent  parts of this tutorial series. The primary objective is to lay the groundwork for a simple lab environment on Azure to simulate the environment in which Active Directory is employed within an enterprise setting.
 </p>
 
-<h2>Overview </h2>
-
 <h2>Virtual Machine Setup</h2>
--	VMware Workstation Pro - 1.2 GB Disk Space and 64-bit OSCWindows Server 2022- 2GB Memory, 20GB Disk Space    Windows 10 Pro - 2GB Memory, 20GB Disk Space (minimum)
 
 
-<h3>Lab Setup</h3>
+- 	  VMware Workstation Pro - 1.2 GB Disk Space and 64-bit OS
+
+
+- 	  Windows Server 2022- 2GB Memory, 20GB Disk Space
+
+- 	  Windows 10 Pro - 2GB Memory, 20GB Disk Space (minimum)
+
+<h2>Lab Setup</h2>
 
 1. Set Up a Virtual Lab Environment:
 -	  Use virtualization software like VMware Workstation, Hyper-V, or VirtualBox.
 -	  Install Windows Server (preferably Windows Server 2019 or later) and configure it as a domain controller.
 -         Install a couple of Windows client machines (e.g., Windows 10 or Windows 11 Enterprise of Pro) and join them to the domain.
+
 
 <h2>Hands-On Activities</h2>
 <h3>Rename the server hostname</h3>
