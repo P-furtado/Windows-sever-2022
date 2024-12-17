@@ -57,7 +57,7 @@
 -	  Create a nested OU inside the locations (e.g., USA > Computers, Users, Service Accounts)
 -	  Create a nested OU inside Computers (e.g., IT > Servers)
 -	  Create a nested OU inside Users (e.g., Accounting, HR, IT)
-	     <p>
+	    
 <img width="700" alt="VM image" src="https://imgur.com/Z4W9hwj">
 </p>
 
