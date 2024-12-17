@@ -9,15 +9,18 @@
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
-- Active Directory Domain Services
-- PowerShell
+- Active Directory Domain Services(AD DS)
+- Group Policy management Console(GPMC)
+- SysInternals Tools
+- File Server Resource Manager(FRSM)
+- Vmware Workstation Pro
+  
 
 <h2>Operating Systems Used </h2>
 
 - Windows Server 2022
-- Windows 10 (21H2)
+- Windows 11 Enterprise (24H2)
+- 
 <h2>Virtual Machine Setup</h2>
 
 
@@ -26,7 +29,7 @@
 
 - 	  Windows Server 2022- 2GB Memory, 20GB Disk Space
 
-- 	  Windows 10 Pro - 2GB Memory, 20GB Disk Space (minimum)
+- 	  Windows 11 Enterprise - 2GB Memory, 20GB Disk Space (minimum)
 
 <h2>Lab Setup</h2>
 <h3> Set Up a Virtual Lab Environment</h3>
