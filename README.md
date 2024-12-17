@@ -43,7 +43,10 @@
 -	  Create a nested OU inside the locations (e.g., USA > Computers, Users, Service Accounts)
 -	  Create a nested OU inside Computers (e.g., IT > Servers)
 -	  Create a nested OU inside Users (e.g., Accounting, HR, IT)
-	  
+	     <p>
+<img width="700" alt="VM image" src="https://imgur.com/Z4W9hwj">
+</p>
+
    <h3>&#9313;  Creating User Accounts</h3>
 	 <h3> Objective: Create user accounts with specific attributes</h3>
 	
@@ -59,7 +62,7 @@
 
   
     <p>
-<img width="700" alt="VM image" src="https://imgur.com/Z4W9hwj">
+<img width="700" alt="VM image" src="https://imgur.com/a/lHkoUfz">
 </p>
 
 <h3>&#9314;  Creating Groups</h3>
