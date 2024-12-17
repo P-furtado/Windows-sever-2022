@@ -24,18 +24,22 @@
 -         Install a couple of Windows client machines (e.g., Windows 10 or Windows 11 Enterprise of Pro) and join them to the domain.
 
 <h3>Hands-On Activities</h3>
-1.	Rename the server hostname
+
+
+1. Rename the server hostname:
+-	  Open Active Directory Users and Computers (ADUC)
 2.	Install Active Directory Tools and Promote as DC
 3.	Creating Organizational Units (OUs)
-●	Objective: Organize the directory structure
+
+Objective: Organize the directory structure
 -	  Open Active Directory Users and Computers (ADUC).
 -	  Create OUs for Different Geographical Locations (e.g., USA, Europe, Asia)
 	○	Right-click the domain name and select New > Organizational Unit.
 -	  Create a nested OU inside the locations (e.g., USA > Computers, Users, Service Accounts)
 -	  Create a nested OU inside Computers (e.g., IT > Servers)
 -	  Create a nested OU inside Users (e.g., Accounting, HR, IT)
+
   
- 6.
     <p>
 <img width="700" alt="VM image" src="https://imgur.com/Z4W9hwj">
 </p>
