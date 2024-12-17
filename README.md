@@ -26,28 +26,30 @@
 
 
 <h2>Hands-On Activities</h2>
-<h3>Rename the server hostname</h3>
 
 <h3>&#9312;  Rename the server hostname</h3>
 
 -	  Open Active Directory Users and Computers (ADUC)
    <h3>&#9313;  Install Active Directory Tools and Promote as DC</h3>
-  <h3>&#9314;  Creating Organizational Units (OUs)</h3>
+   <h2>Organizational Units</h2>
+  <h3>&#9312;  Creating Organizational Units (OUs)</h3>
 
 
-Objective: Organize the directory structure
+<h3> Objective: Organize the directory structure</h3>
+
 -	  Open Active Directory Users and Computers (ADUC).
 -	  Create OUs for Different Geographical Locations (e.g., USA, Europe, Asia)
-	○	Right-click the domain name and select New > Organizational Unit.
+		○	Right-click the domain name and select New > Organizational Unit.
 -	  Create a nested OU inside the locations (e.g., USA > Computers, Users, Service Accounts)
 -	  Create a nested OU inside Computers (e.g., IT > Servers)
 -	  Create a nested OU inside Users (e.g., Accounting, HR, IT)
--	  2.	Creating User Accounts
-	 
-	●	Objective: Create user accounts with specific attributes.
-	○Navigate to the appropriate OU (e.g., HR).
-	○Right-click the OU and select New > User.
-	○Fill in the user details:
+	  <h3>&#9313;  Install Active Directory Tools and Promote as DC</h3>
+   <h3>&#9313;  Creating User Accounts</h3>
+	 <h3> Objective: Create user accounts with specific attributes</h3>
+	
+-	  Navigate to the appropriate OU (e.g., HR).
+-	  Right-click the OU and select New > User.
+-	  Fill in the user details:
 		○	First Name: John
 		○	Last Name: Doe
 		○	User Logon Name: jdoe
